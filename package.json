@@ -3,7 +3,29 @@
   "version": "1.0.0",
   "description": "Override your input files with style. (Fork of the original dropify without jQuery dependency)",
   "main": "index.js",
+  "type": "module",
+  "style": "dist/css/dropify.css",
+  "exports": {
+    "import": "./src/js/index.js",
+    "require": "./src/js/index.cjs"
+  },
+  "files": [
+    "./src/js/index.js",
+    "./src/js/index.cjs",
+    "./dist/css/dropify.css"
+  ],
+  "scripts": {
+    "prepublish": "sass src/scss/dropify.scss dist/css/dropify.css",
+    "prepare": "rollup src/js/index.js --file src/js/index.cjs --format cjs"
+  },
   "repository": "https://github.com/slimgee/dropify",
   "author": "Given Ncube",
-  "license": "MIT"
+  "license": "MIT",
+  "packageManager": "yarn@4.1.0",
+  "dependencies": {
+    "rollup": "^4.10.0"
+  },
+  "devDependencies": {
+    "sass": "^1.70.0"
+  }
 }
