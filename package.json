@@ -1,0 +1,9 @@
+{
+  "name": "@flixtechs/dropify",
+  "version": "1.0.0",
+  "description": "Override your input files with style. (Fork of the original dropify without jQuery dependency)",
+  "main": "index.js",
+  "repository": "https://github.com/slimgee/dropify",
+  "author": "Given Ncube",
+  "license": "MIT"
+}
